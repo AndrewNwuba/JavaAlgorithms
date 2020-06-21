@@ -38,17 +38,18 @@ public class PercolationStats {
 
     // low endpoint of 95% confidence interval
     public double confidenceLo() {
-       return StdStats.min(data);
+        return StdStats.mean(data) - 2* StdStats.stddev(data);
     }
 
     // high endpoint of 95% confidence interval
     public double confidenceHi() {
-        return StdStats.max(data);
+        return StdStats.mean(data) + 2* StdStats.stddev(data);
     }
+
 
     // test client (see below)
     public static void main(String[] args) {
-        PercolationStats stats = new PercolationStats(2, 30);
+        PercolationStats stats = new PercolationStats(200, 100);
         System.out.println("Mean: " + stats.mean());
         System.out.println("Standard Deviatian: " + stats.stddev());
         System.out.println("95% confidence interval: [ " + stats.confidenceLo() + ", " + stats.confidenceHi() + "]" );
