@@ -6,9 +6,7 @@
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 public class PercolationStats {
-    private int gridLength;
     private double[] data;
-
     // perform independent trials on an n-by-n grid
     public PercolationStats(int n, int trials) {
         if (n <= 0) {
@@ -17,7 +15,6 @@ public class PercolationStats {
         if (trials <= 0) {
             throw new IllegalArgumentException("Trials too small (" + trials + ")");
         }
-        this.gridLength = n;
         this.data = new double[trials];
         Percolation percolation;
         for (int i = 0; i < trials; i++) {
@@ -51,7 +48,7 @@ public class PercolationStats {
 
     // test client (see below)
     public static void main(String[] args) {
-     PercolationStats stats = new PercolationStats(200, 30);
+        PercolationStats stats = new PercolationStats(2, 30);
         System.out.println("Mean: " + stats.mean());
         System.out.println("Standard Deviatian: " + stats.stddev());
         System.out.println("95% confidence interval: [ " + stats.confidenceLo() + ", " + stats.confidenceHi() + "]" );
