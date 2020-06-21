@@ -91,7 +91,7 @@ public class Percolation {
         return this.unionData.connected(gridLength * gridLength, gridLength*gridLength + 1);
     }
 
-    public int gridLocation(int row, int col) {
+    private int gridLocation(int row, int col) {
         return (row - 1) * gridLength + (col -1);
     }
 
