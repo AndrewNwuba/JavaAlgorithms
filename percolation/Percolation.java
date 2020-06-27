@@ -78,7 +78,7 @@ public class Percolation {
 
     // is the site (row, col) full?
     public boolean isFull(int row, int col) {
-        return this.unionData.connected(gridLocation(row, col), gridLength * gridLength);
+        return this.unionData.connected(gridLocation(row, col), gridLength * gridLength) && this.unionData.connected(gridLocation(row,col), gridLength* gridLength);
     }
 
     // returns the number of open sites

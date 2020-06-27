@@ -52,7 +52,7 @@ public class PercolationStats {
         PercolationStats stats = new PercolationStats(2000, 10);
         System.out.println("Mean: " + stats.mean());
         System.out.println("Standard Deviatian: " + stats.stddev());
-        System.out.println("95% confidence interval: [ " + stats.confidenceLo() + ", " + stats.confidenceHi() + "]" );
+        System.out.println("95% confidence interval: [" + stats.confidenceLo() + ", " + stats.confidenceHi() + "]" );
     }
 
 }
