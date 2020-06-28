@@ -4,6 +4,14 @@
  *  Description:
  **************************************************************************** */
 
+package RandomizedQueue;
+
+/* *****************************************************************************
+ *  Name:
+ *  Date:
+ *  Description:
+ **************************************************************************** */
+
 
 
 import edu.princeton.cs.algs4.StdOut;
@@ -50,7 +58,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     // remove and return a random item
     public Item dequeue() {
         if (this.N == 0) {
-           throw new NoSuchElementException("Error: There is no element to remove!");
+            throw new NoSuchElementException("Error: There is no element to remove!");
         }
         shuffle(this.array,
                 0,
@@ -96,7 +104,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         public Item next() {
             Item item = array[accessOrderArr[iteration]];
             if (item == null) {
-               throw new NoSuchElementException("Error: No element to return");
+                throw new NoSuchElementException("Error: No element to return");
             }
             iteration++;
             return item;
@@ -118,3 +126,4 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
 
 }
+
